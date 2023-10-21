@@ -1,3 +1,4 @@
+// * 45:00
 const userTab = document.querySelector("[data-userWeather]");
 const searchTab = document.querySelector("[data-searchWeather]");
 const userContainer = document.querySelector(".weather-container");
@@ -32,7 +33,7 @@ function switchTab(newTab) {
             userInfoContainer.classList.remove("active");
             //ab main your weather tab me aagya hu, toh weather bhi display karna poadega, so let's check local storage first
             //for coordinates, if we haved saved them there.
-            getfromSessionStorage();
+            getfromSessionStorage(); 
         }
     }
 }
