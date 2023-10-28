@@ -61,7 +61,7 @@ function getfromSessionStorage() {
     }
 
 }
-
+// 1:08:00
 async function fetchUserWeatherInfo(coordinates) {
     const {lat, lon} = coordinates;
     // make grantcontainer invisible
@@ -69,7 +69,7 @@ async function fetchUserWeatherInfo(coordinates) {
     //make loader visible
     loadingScreen.classList.add("active");
 
-    //API CALL
+    //API call
     try {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
@@ -78,7 +78,8 @@ async function fetchUserWeatherInfo(coordinates) {
 
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
-        renderWeatherInfo(data);
+
+        renderWeatherInfo(data); // put the value in the UI by rendering
     }
     catch(err) {
         loadingScreen.classList.remove("active");
@@ -114,7 +115,7 @@ function renderWeatherInfo(weatherInfo) {
 
 
 }
-
+//1:38:00
 function getLocation() {
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -168,4 +169,4 @@ async function fetchSearchWeatherInfo(city) {
     catch(err) {
         //hW
     }
-}
+} 

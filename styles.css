@@ -230,3 +230,20 @@ h1 {
     margin-bottom:1px;
 }
   
+.days-weather{
+    text-align:center;
+    
+}
+.days-weather button{
+    font-size: 1.5rem;
+    padding: 5px;
+    background-color: rgb(119, 153, 168);
+    border: 1px solid black;
+    border-radius: 10px;
+    color: #eaebea;
+    cursor: pointer;
+}
+.days-weather button:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
